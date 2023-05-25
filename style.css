@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+header {
+  font-weight: 500;
+  font-size: 2vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #2c2c2c;
+  height: 64px;
+  /* padding: 35px 30px; */
+  width: 100%;
+}
+#search {
+  height: 2em;
+  width: 14em;
+  background-color: #2c2c2c;
+  border-radius: 6px;
+  border: 1px solid #57606a;
+  color: white;
+  padding: 0 10px;
+}
+#search-btn {
+  padding: 4px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #f6f8fa;
+  border: 1px solid rgb(213, 211, 211);
+}
+#search-btn:hover {
+  background-color: #e9ebec;
+}
+#search::placeholder {
+  padding: 0 10px;
+  color: rgb(207, 212, 212);
+  font-size: medium;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* End nav bar */
+
+.second-nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 30px;
+  margin-top: 30px;
+  grid-column: 1/7;
+}
+
+.second-nav ul li {
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+}
+.second-nav ul li:hover {
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #f7f8f9;
+}
+
+.line {
+  margin-top: 15px;
+  width: 100vw;
+  background-color: #d8dee4;
+  height: 1px;
+  position: relative;
+}
+.line::before {
+  content: "";
+  width: 160px;
+  height: 3px;
+  background-color: #fda996;
+  position: absolute;
+  left: 650px;
+  /* transition: all 2sc ease; */
+}
+
+span {
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #eff1f3;
+  border-radius: 40%;
+  padding: 2px 5px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(6,1fr); 
+
+}
+
+ .pic-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  /* position: absolute;
+  left: 150px;
+  top: 105px; */
+} 
+
+.pic-bio{
+  /* display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(4,1fr); */
+  z-index: 999;
+  grid-row: 2/7;
+  padding: 30px;
+}
+
+.repo{
+  grid-row:2/7 ;
+  grid-column:2/6 ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#pic {
+  /* position: absolute; */
+
+  border-radius: 50%;
+  width: 40vh;
+  margin-bottom: 20px;
+}
+#username {
+  font-size: x-large;
+  font-weight: 200;
+  color: #908e8e;
+}
+#name {
+  font-size: 3.5vmin;
+  font-weight: 500;
+}
+#bio {
+  max-width: 350px;
+}
+.edit {
+  padding: 8px 110px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #f6f8fa;
+  border: 1px solid rgb(213, 211, 211);
+}
+
+.followers {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.public_repos {
+  border: 1px solid #d5d5d5;
+    width: 400px;
+    height: 150px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#repo-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #116edb;
+}
+
+.public_repos #header{
+  display: flex;
+  justify-content: space-between;
+}
+.public_repos .body{
+  /* display: flex;
+  flex-direction: column;
+  /* margin-top: 30px; */
+  justify-content: space-around;
+
+  
+}
+
+.public_repos .repo-lang{
+}
+
+#repo-public{
+  padding: 2px 12px;
+  font-size: 12px;
+  border: 1px solid #777E86;
+  border-radius: 50px;
+  font-weight: 500;
+}
+#header{
+  padding: 10px;
+}
+#body{
+  padding: 10px;
+}
+#repo-lang{
+  padding: 10px;
+}
+/* 
+@media (max-width:750px) {
+ 
+ 
+  ul{
+    display: none;
+  }
+  
+  
+}@media (max-width:740px) {
+ 
+ 
+  header nav #search {
+    display: block;
+  }
+  header nav #search-btn {
+    display: block;
+  }
+  
+} */
+
+
+
