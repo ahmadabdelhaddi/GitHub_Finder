@@ -16,6 +16,11 @@ let name_2 = document.getElementById("name-2");
 let public_repos_2 = document.getElementById("public_repos-2");
 let followers_2 = document.getElementById("followers-2");
 let search_2 = document.getElementById("search-2");
+ let search_btn=document.getElementById("search-btn");
+// ################
+  search_btn.addEventListener("click",()=>{
+    window.location.href="index.html"
+  })
 
 search_1.addEventListener("click", () => {
   getFirstProfile();
@@ -59,15 +64,13 @@ function whoWinner() {
   let winer_1 = document.querySelector("#winer-1");
   let winer_2 = document.querySelector("#winer-2");
 
-
-
   if (username.value !== "" && username_2.value !== "") {
     if (
       parseInt(public_repos_1.innerHTML.split(" ")[3]) >
       parseInt(public_repos_2.innerHTML.split(" ")[3])
     ) {
-      winer_1.innerHTML = "Winner" ;
-      winer_2.innerHTML = "Lose" ;
+      winer_1.innerHTML = "Winner";
+      winer_2.innerHTML = "Loser";
     } else if (
       parseInt(public_repos_1.innerHTML.split(" ")[3]) ==
       parseInt(public_repos_2.innerHTML.split(" ")[3])
@@ -77,13 +80,25 @@ function whoWinner() {
         followers_2.innerHTML.split(" ")[1]
       ) {
         winer_1.innerHTML = "Winner";
-        winer_2.innerHTML = "lose";
+        winer_2.innerHTML = "Loser";
       } else {
-        winer_1.innerHTML = "lose";
+        winer_1.innerHTML = "Losers";
         winer_2.innerHTML = "Winner";
       }
+      if (
+        parseInt(public_repos_1.innerHTML.split(" ")[3]) ==
+        parseInt(public_repos_2.innerHTML.split(" ")[3])
+      ) {
+        if (
+          followers_1.innerHTML.split(" ")[1] ==
+          followers_2.innerHTML.split(" ")[1]
+        ) {
+          winer_1.innerHTML = "Tie";
+          winer_2.innerHTML = "Tie";
+        }
+      }
     } else {
-      winer_1.innerHTML = "lose";
+      winer_1.innerHTML = "Loser";
       winer_2.innerHTML = "Winner";
     }
   }

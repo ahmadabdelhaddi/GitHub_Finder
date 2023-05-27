@@ -30,8 +30,8 @@ header {
   padding: 0 10px;
 }
 #search-btn {
-  padding: 8px 30px;
-  border-radius: 8px;
+  padding: 4px 30px;
+  border-radius: 20px;
   border: none;
   font-weight: 600;
   font-size: 15px;
@@ -68,16 +68,24 @@ a {
   gap: 10px;
 }
 /* End nav bar */
-
+#whowinner{
+  padding: 4px 30px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #f6f8fa;
+    border: 1px solid rgb(213, 211, 211);
+}
 body {
-  background-image: url(images/FIRST.png);
-  background-size: cover;
   height: 100vh;
   width: 100vw;
-  background-repeat: no-repeat;
   overflow-x: hidden;
+background-color: #1a1a1a !important;
+
 }
 .container {
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -142,7 +150,10 @@ input{
   padding: 10px;
 }
 
+@media (max-width:770px) {
 
-button #whowinner{
- 
+  .first { 
+    margin-bottom: 20px;
+  }
+  
 }
